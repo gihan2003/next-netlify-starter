@@ -36,7 +36,7 @@ export default function HomePage() {
 
   const handleUnlockClick = () => {
     // Open the unlock link in a new tab
-    window.open("https://www.profitableratecpm.com/kmdypbaxgr?key=40131d0752fae52bfedd6f418fd93306", "_blank")
+    window.open("https://otieu.com/4/8877443", "_blank")
 
     // Start the countdown
     setIsUnlocked(true)
@@ -52,7 +52,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
-      <Card className="w-full max-w-md shadow-2xl border-0">
+      <Card className="w-full max-w-md shadow-xl">
         <CardContent className="p-8 text-center space-y-6">
           <div className="space-y-2">
             <h1 className="text-3xl font-bold text-gray-900">VideoHub</h1>
@@ -63,7 +63,7 @@ export default function HomePage() {
             {!isUnlocked ? (
               <Button
                 onClick={handleUnlockClick}
-                className="w-full h-12 bg-green-600 hover:bg-green-700 text-white font-semibold text-lg transition-all duration-200 transform hover:scale-105 shadow-lg"
+                className="w-full h-12 bg-green-600 hover:bg-green-700 text-white font-semibold text-lg transition-all duration-200 transform hover:scale-105"
                 size="lg"
               >
                 <Lock className="mr-2 h-5 w-5" />
@@ -71,17 +71,17 @@ export default function HomePage() {
               </Button>
             ) : (
               <div className="space-y-4">
-                <div className="flex items-center justify-center space-x-2 text-gray-700 bg-gray-50 rounded-lg p-3">
-                  <Timer className="h-5 w-5 text-blue-600" />
-                  <span className="text-sm font-semibold">{isCountdownActive ? "Please wait..." : "Ready!"}</span>
+                <div className="flex items-center justify-center space-x-2 text-gray-600">
+                  <Timer className="h-5 w-5" />
+                  <span className="text-sm font-medium">{isCountdownActive ? "Please wait..." : "Ready!"}</span>
                 </div>
 
                 <Button
                   onClick={handleViewVideoClick}
                   disabled={!canViewVideo}
-                  className={`w-full h-12 font-semibold text-lg transition-all duration-200 shadow-lg ${
+                  className={`w-full h-12 font-semibold text-lg transition-all duration-200 ${
                     canViewVideo
-                      ? "bg-blue-600 hover:bg-blue-700 text-white transform hover:scale-105"
+                      ? "bg-purple-600 hover:bg-purple-700 text-white transform hover:scale-105"
                       : "bg-gray-300 text-gray-500 cursor-not-allowed"
                   }`}
                   size="lg"
@@ -97,15 +97,16 @@ export default function HomePage() {
             )}
           </div>
 
-          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 text-left space-y-2">
-            <h3 className="font-semibold text-gray-800 text-sm mb-2">Instructions:</h3>
-            <div className="text-xs text-gray-700 space-y-1">
-              <p>● Unlock Content එක ක්ලික් කරාට පස්සෙ වෙන සයිට් එකකට යයි.</p>
-              <p>● 12s ක් විතර ඒ සයිට් එකෙ ඉන්න.</p>
-              <p>● පසුව (RETURN BACK) මේ පිටුවට එන්න.</p>
-              <p>● ඊන් පසු VIEW VIDEO කියන එක නැවත ක්ලික් කරන්න.</p>
-              <p>● එකෙන් ගියාට පස්සේ Video Hub website එකෙන් videos එනවා.</p>
-            </div>
+          {/* Instructions */}
+          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-left">
+            <h3 className="font-semibold text-blue-900 mb-2 text-center">How to Access Videos:</h3>
+            <ol className="text-sm text-blue-800 space-y-1">
+              <li>• Unlock Content එක ක්ලික් කරාට පස්සෙ වෙන සයිට් එකකට යයි.</li>
+              <li>• 12s ක් විතර ඒ සයිට් එකෙ ඉන්න.</li>
+              <li>• පසුව (RETURN BACK) මේ පිටුවට එන්න.</li>
+              <li>• ඊන් පසු VIEW VIDEO කියන එක නැවත ක්ලික් කරන්න.</li>
+              <li>• එකෙන් ගියාට පස්සේ Video Hub website එකෙන් videos එනවා.</li>
+            </ol>
           </div>
 
           {isUnlocked && (
