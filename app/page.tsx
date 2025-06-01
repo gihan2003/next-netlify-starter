@@ -97,6 +97,17 @@ export default function HomePage() {
             )}
           </div>
 
+          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 text-left space-y-2">
+            <h3 className="font-semibold text-gray-800 text-sm mb-2">Instructions:</h3>
+            <div className="text-xs text-gray-700 space-y-1">
+              <p>● Unlock Content එක ක්ලික් කරාට පස්සෙ වෙන සයිට් එකකට යයි.</p>
+              <p>● 12s ක් විතර ඒ සයිට් එකෙ ඉන්න.</p>
+              <p>● පසුව (RETURN BACK) මේ පිටුවට එන්න.</p>
+              <p>● ඊන් පසු VIEW VIDEO කියන එක නැවත ක්ලික් කරන්න.</p>
+              <p>● එකෙන් ගියාට පස්සේ Video Hub website එකෙන් videos එනවා.</p>
+            </div>
+          </div>
+
           {isUnlocked && (
             <div className="text-xs text-gray-500 space-y-1">
               <p>✓ Unlock link opened in new tab</p>
